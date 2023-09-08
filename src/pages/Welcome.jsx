@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 import Logo from "../ui/Logo"
 import Heading from "../ui/Heading"
 import Locale from "../ui/Locale"
+import UserForm from "../features/user/userForm"
 
 const StyledWelcome = styled.div`
   display: flex;
@@ -37,7 +38,6 @@ const Info = styled.p`
 const LocaleContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 1.6rem;
 `
 
 export default function Welcome() {
@@ -53,6 +53,7 @@ export default function Welcome() {
         <Heading as="h1">{t("welcome.heading")}</Heading>
         <Info>{t("welcome.info")}</Info>
       </TextBox>
+      <UserForm />
       <LocaleContainer>
         <Locale type="welcome" />
       </LocaleContainer>
