@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Outlet } from "react-router-dom"
+import Footer from "./Footer"
 
 const StyledAppLayout = styled.div`
   display: grid;
@@ -12,6 +13,7 @@ export default function AppLayout() {
   return (
     <StyledAppLayout>
       <Outlet />
+      <Footer />
     </StyledAppLayout>
   )
 }
