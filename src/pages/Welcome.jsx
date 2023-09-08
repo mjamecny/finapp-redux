@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import Logo from "../ui/Logo"
+
 const StyledWelcome = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,5 +11,9 @@ const StyledWelcome = styled.div`
 `
 
 export default function Welcome() {
-  return <StyledWelcome>Welcome</StyledWelcome>
+  return (
+    <StyledWelcome>
+      <Logo type="medium" />
+    </StyledWelcome>
+  )
 }
