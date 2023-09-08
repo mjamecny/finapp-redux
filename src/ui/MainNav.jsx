@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom"
 import { styled } from "styled-components"
 
 import { useSelector } from "react-redux"
+import HeaderMenu from "./HeaderMenu"
 
 const StyledNav = styled.div`
   display: flex;
@@ -54,6 +55,7 @@ export default function MainNav({ setShowMenu }) {
           </StyledNavLink>
         </NavItem>
       </NavMenu>
+      <HeaderMenu closeMenu={closeMenu} />
     </StyledNav>
   )
 }
