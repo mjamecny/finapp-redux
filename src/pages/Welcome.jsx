@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { useTranslation } from "react-i18next"
 
 import Logo from "../ui/Logo"
 import Heading from "../ui/Heading"
@@ -33,6 +34,8 @@ const Info = styled.p`
 `
 
 export default function Welcome() {
+  const { t } = useTranslation()
+
   return (
     <StyledWelcome>
       <Logo type="medium" />
@@ -40,10 +43,8 @@ export default function Welcome() {
         <WelcomeImage src="./welcome_image.svg" alt="Person with graphs" />
       </ImageBox>
       <TextBox>
-        <Heading as="h1">Easy way to manage your transactions</Heading>
-        <Info>
-          Track your financial transactions for three different accounts.
-        </Info>
+        <Heading as="h1">{t("welcome.heading")}</Heading>
+        <Info>{t("welcome.info")}</Info>
       </TextBox>
     </StyledWelcome>
   )
