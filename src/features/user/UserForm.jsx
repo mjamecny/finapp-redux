@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
 import Form from "../../ui/Form"
@@ -11,11 +12,13 @@ import { setUsername } from "./userSlice"
 export default function UserForm() {
   const [name, setName] = useState("")
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   function handleSubmit(e) {
     e.preventDefault()
     dispatch(setUsername(name))
     setName("")
+    navigate("/dashboard")
   }
 
   return (
