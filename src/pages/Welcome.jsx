@@ -10,10 +10,22 @@ const StyledWelcome = styled.div`
   gap: 2rem;
 `
 
+const ImageBox = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const WelcomeImage = styled.img`
+  width: 60%;
+`
+
 export default function Welcome() {
   return (
     <StyledWelcome>
       <Logo type="medium" />
+      <ImageBox>
+        <WelcomeImage src="./welcome_image.svg" alt="Person with graphs" />
+      </ImageBox>
     </StyledWelcome>
   )
 }
