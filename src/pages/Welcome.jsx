@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next"
 
 import Logo from "../ui/Logo"
 import Heading from "../ui/Heading"
+import Locale from "../ui/Locale"
 
 const StyledWelcome = styled.div`
   display: flex;
@@ -33,6 +34,12 @@ const Info = styled.p`
   color: #868e96;
 `
 
+const LocaleContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+`
+
 export default function Welcome() {
   const { t } = useTranslation()
 
@@ -46,6 +53,9 @@ export default function Welcome() {
         <Heading as="h1">{t("welcome.heading")}</Heading>
         <Info>{t("welcome.info")}</Info>
       </TextBox>
+      <LocaleContainer>
+        <Locale type="welcome" />
+      </LocaleContainer>
     </StyledWelcome>
   )
 }
