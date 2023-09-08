@@ -1,17 +1,21 @@
 import { useState } from "react"
+import { useDispatch } from "react-redux"
 
 import Form from "../../ui/Form"
 import Input from "../../ui/Input"
 import FormRow from "../../ui/FormRow"
 import Button from "../../ui/Button"
 
+import { setUsername } from "./userSlice"
+
 export default function UserForm() {
-  const [username, setUsername] = useState("")
+  const [name, setName] = useState("")
+  const dispatch = useDispatch()
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log(username)
-    setUsername("")
+    dispatch(setUsername(name))
+    setName("")
   }
 
   return (
@@ -20,7 +24,8 @@ export default function UserForm() {
         <Input
           id="initialBalance"
           type="text"
-          onChange={(e) => setUsername(e.target.value)}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
       </FormRow>
       <Button size="small">Go to app</Button>
