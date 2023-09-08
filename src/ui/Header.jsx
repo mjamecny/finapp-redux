@@ -3,6 +3,7 @@ import { FaBars, FaX } from "react-icons/fa6"
 import { useState } from "react"
 
 import Logo from "./Logo"
+import MainNav from "./MainNav"
 
 const StyledHeader = styled.header`
   display: flex;
@@ -32,6 +33,7 @@ export default function Header() {
       ) : (
         <FaBars onClick={() => setShowMenu((showMenu) => !showMenu)} />
       )}
+      {showMenu && <MainNav setShowMenu={setShowMenu} />}
     </StyledHeader>
   )
 }
