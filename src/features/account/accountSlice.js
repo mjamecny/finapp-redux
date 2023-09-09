@@ -29,6 +29,12 @@ const accountSlice = createSlice({
   },
 })
 
+export const getTransactions = (state) =>
+  state.account.accounts.reduce((allTransactions, account) => {
+    allTransactions.push(...account.transactions)
+    return allTransactions
+  }, [])
+
 export const { addAccount, addTransaction, setAccounts, removeAccount } =
   accountSlice.actions
 export default accountSlice.reducer
