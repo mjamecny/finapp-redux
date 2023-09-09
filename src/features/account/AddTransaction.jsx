@@ -2,6 +2,8 @@ import styled from "styled-components"
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useTranslation } from "react-i18next"
+import toast from "react-hot-toast"
+import { useNavigate } from "react-router-dom"
 
 import Form from "../../ui/Form"
 import FormRow from "../../ui/FormRow"
@@ -25,6 +27,7 @@ export default function AddTransaction() {
   const categories = useCategories()
   const dispatch = useDispatch()
   const { t } = useTranslation()
+  const navigate = useNavigate()
 
   const [accountType, setAccountType] = useState("Bank")
   const [category, setCategory] = useState("home")
@@ -39,6 +42,7 @@ export default function AddTransaction() {
 
     const newTransaction = {
       id: crypto.randomUUID(),
+      created_at: new Date(),
       accountType,
       category,
       amount: Number(transactionType === "withdraw" ? -amount : amount),
@@ -47,6 +51,8 @@ export default function AddTransaction() {
     }
 
     dispatch(addTransaction(newTransaction))
+    toast.success(t("add_transaction.add_toast"))
+    navigate("/dashboard")
   }
 
   return (
