@@ -22,5 +22,20 @@
     "add_button": "Add account",
     "add_toast": "New account successfully created",
     "account_exists_toast": "Account already exists"
+  },
+  "category": {
+    "home": "Home",
+    "food": "Food",
+    "entertainment": "Entertainment",
+    "health": "Health",
+    "salary": "Salary",
+    "gift": "Gift",
+    "pets": "Pets",
+    "car": "Car",
+    "transport": "Transport",
+    "study": "Study",
+    "subscription": "Subscription",
+    "utilities": "Utilities",
+    "other": "Other"
   }
 }

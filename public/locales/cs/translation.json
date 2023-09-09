@@ -22,5 +22,20 @@
     "add_button": "Přidat účet",
     "add_toast": "Účet byl přidán",
     "account_exists_toast": "Tento účet již existuje"
+  },
+  "category": {
+    "home": "Domov",
+    "food": "Jídlo",
+    "entertainment": "Zábava",
+    "health": "Zdraví",
+    "salary": "Mzda",
+    "gift": "Dárky",
+    "pets": "Zvířata",
+    "car": "Auto",
+    "transport": "Doprava",
+    "study": "Vzdělávání",
+    "subscription": "Předplatné",
+    "utilities": "Účty",
+    "other": "Jiné"
   }
 }
