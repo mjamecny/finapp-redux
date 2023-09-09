@@ -11,8 +11,15 @@ const accountSlice = createSlice({
     addAccount(state, action) {
       state.accounts.push(action.payload)
     },
+    addTransaction(state, action) {
+      const account = state.accounts.find(
+        (account) => account.type === action.payload.accountType
+      )
+      account.balance += action.payload.amount
+      account.transactions.push(action.payload)
+    },
   },
 })
 
-export const { addAccount } = accountSlice.actions
+export const { addAccount, addTransaction } = accountSlice.actions
 export default accountSlice.reducer
