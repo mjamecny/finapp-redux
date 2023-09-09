@@ -23,6 +23,9 @@
     "add_toast": "Účet byl přidán",
     "account_exists_toast": "Tento účet již existuje"
   },
+  "delete_account": {
+    "delete_toast": "Účet byl smazán"
+  },
   "add_transaction": {
     "account_label": "Účet",
     "category_label": "Kategorie",

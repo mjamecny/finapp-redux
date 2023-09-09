@@ -14,6 +14,11 @@ const accountSlice = createSlice({
     addAccount(state, action) {
       state.accounts.push(action.payload)
     },
+    removeAccount(state, action) {
+      state.accounts = state.accounts.filter(
+        (account) => account.id !== action.payload
+      )
+    },
     addTransaction(state, action) {
       const account = state.accounts.find(
         (account) => account.type === action.payload.accountType
@@ -24,5 +29,6 @@ const accountSlice = createSlice({
   },
 })
 
-export const { addAccount, addTransaction, setAccounts } = accountSlice.actions
+export const { addAccount, addTransaction, setAccounts, removeAccount } =
+  accountSlice.actions
 export default accountSlice.reducer

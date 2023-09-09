@@ -1,10 +1,13 @@
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { AiOutlineClose } from "react-icons/ai"
+import { useTranslation } from "react-i18next"
+import toast from "react-hot-toast"
 import styled, { css } from "styled-components"
 
 import useFetchRate from "../../hooks/useFetchRate"
 import useFetchBtcPrice from "../../hooks/useFetchBtcPrice"
 import { getCurrency } from "../../utils/helpers"
+import { removeAccount } from "./accountSlice"
 
 import AccountIcon from "../../ui/AccountIcon"
 import SpinnerMini from "../../ui/SpinnerMini"
@@ -68,15 +71,22 @@ const StyledAmount = styled.p`
 
 export default function Account({ account }) {
   const currency = useSelector((state) => state.user.currency)
-  const { type, balance } = account
+  const dispatch = useDispatch()
+  const { type, balance, id } = account
   const { btcPrice, isLoading: isLoadingPrice } = useFetchBtcPrice()
   const { rate, isLoading: isLoadingRate } = useFetchRate()
+  const { t } = useTranslation()
 
   const btcConverted = btcPrice / rate
 
+  function handleRemove() {
+    dispatch(removeAccount(id))
+    toast.success(t("delete_account.delete_toast"))
+  }
+
   return (
     <StyledAccount type={type}>
-      <CloseButton>
+      <CloseButton onClick={handleRemove}>
         <AiOutlineClose />
       </CloseButton>
       <AccountIcon type={type} size="medium" />

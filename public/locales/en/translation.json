@@ -23,6 +23,9 @@
     "add_toast": "New account successfully created",
     "account_exists_toast": "Account already exists"
   },
+  "delete_account": {
+    "delete_toast": "Account successfully deleted"
+  },
   "add_transaction": {
     "account_label": "Account",
     "category_label": "Category",
