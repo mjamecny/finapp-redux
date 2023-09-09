@@ -46,5 +46,9 @@
     "subscription": "Subscription",
     "utilities": "Utilities",
     "other": "Other"
+  },
+  "empty": {
+    "accounts": "No accounts could be found.",
+    "add_account": "Add account"
   }
 }
