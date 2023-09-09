@@ -26,6 +26,13 @@ const accountSlice = createSlice({
       account.balance += action.payload.amount
       account.transactions.push(action.payload)
     },
+    removeTransaction(state, action) {
+      state.accounts.forEach((account) => {
+        account.transactions = account.transactions.filter(
+          (transaction) => transaction.id !== action.payload
+        )
+      })
+    },
   },
 })
 
