@@ -2,5 +2,9 @@
   "welcome": {
     "heading": "Easy way to manage your transactions",
     "info": "Track your financial transactions for three different accounts."
+  },
+  "main_nav": {
+    "welcome": "Welcome",
+    "dashboard": "Dashboard"
   }
 }

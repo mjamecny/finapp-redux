@@ -2,5 +2,9 @@
   "welcome": {
     "heading": "Jednoduchý způsob správy vašich transakcí",
     "info": "Sledujte své finanční transakce pro tři různé účty."
+  },
+  "main_nav": {
+    "welcome": "Vítej",
+    "dashboard": "Domů"
   }
 }

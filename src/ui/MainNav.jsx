@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom"
 import { styled } from "styled-components"
-
+import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
+
 import HeaderMenu from "./HeaderMenu"
 
 const StyledNav = styled.div`
@@ -41,17 +42,20 @@ const StyledNavLink = styled(NavLink)`
 
 export default function MainNav({ setShowMenu }) {
   const username = useSelector((state) => state.user.username)
+
+  const { t } = useTranslation()
+
   function closeMenu() {
     setShowMenu(false)
   }
 
   return (
     <StyledNav>
-      <span>Hello, {username}</span>
+      <span>{`${t("main_nav.welcome")}, ${username}`}</span>
       <NavMenu>
         <NavItem>
           <StyledNavLink to="/dashboard" onClick={closeMenu}>
-            Dashboard
+            {t("main_nav.dashboard")}
           </StyledNavLink>
         </NavItem>
       </NavMenu>
