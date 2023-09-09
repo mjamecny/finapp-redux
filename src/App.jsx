@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Toaster } from "react-hot-toast"
 
 import Welcome from "./pages/Welcome"
 import GlobalStyles from "./styles/GlobalStyles"
@@ -22,6 +23,19 @@ export default function App() {
             <Route index element={<Welcome />} />
           </Routes>
         </BrowserRouter>
+        <Toaster
+          toastOptions={{
+            success: {
+              duration: 3000,
+            },
+            error: {
+              duration: 5000,
+            },
+            style: {
+              fontSize: "16px",
+            },
+          }}
+        />
       </DarkModeProvider>
     </>
   )

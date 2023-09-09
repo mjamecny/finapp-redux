@@ -15,5 +15,12 @@
     "bank": "Banka",
     "bitcoin": "Bitcoin",
     "cash": "Hotovost"
+  },
+  "add_account": {
+    "account_label": "Účet",
+    "initial_label": "Počáteční stav účtu",
+    "add_button": "Přidat účet",
+    "add_toast": "Účet byl přidán",
+    "account_exists_toast": "Tento účet již existuje"
   }
 }

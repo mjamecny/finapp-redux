@@ -15,5 +15,12 @@
     "bank": "Bank",
     "bitcoin": "Bitcoin",
     "cash": "Cash"
+  },
+  "add_account": {
+    "account_label": "Account",
+    "initial_label": "Initial balance",
+    "add_button": "Add account",
+    "add_toast": "New account successfully created",
+    "account_exists_toast": "Account already exists"
   }
 }
