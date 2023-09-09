@@ -42,7 +42,7 @@ export default function AddTransaction() {
 
     const newTransaction = {
       id: crypto.randomUUID(),
-      created_at: new Date(),
+      created_at: new Date().toISOString(),
       accountType,
       category,
       amount: Number(transactionType === "withdraw" ? -amount : amount),
