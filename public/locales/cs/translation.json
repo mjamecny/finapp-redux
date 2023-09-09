@@ -10,5 +10,10 @@
   "user_form": {
     "button_label": "Přejdi do aplikace",
     "username_label": "Přezdívka"
+  },
+  "account_categories": {
+    "bank": "Banka",
+    "bitcoin": "Bitcoin",
+    "cash": "Hotovost"
   }
 }

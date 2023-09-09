@@ -1,7 +1,10 @@
 import styled from "styled-components"
 
 import Form from "../../ui/Form"
+import FormRow from "../../ui/FormRow"
 import { Select } from "../../ui/Select"
+
+import useAccountCategories from "../../hooks/useAccountCategories"
 
 const StyledAddAccount = styled.div`
   display: flex;
@@ -11,9 +14,14 @@ const StyledAddAccount = styled.div`
 `
 
 export default function AddAccount() {
+  const accountCategories = useAccountCategories()
   return (
     <StyledAddAccount>
-      <Form></Form>
+      <Form>
+        <FormRow label="Account">
+          <Select options={accountCategories} />
+        </FormRow>
+      </Form>
     </StyledAddAccount>
   )
 }

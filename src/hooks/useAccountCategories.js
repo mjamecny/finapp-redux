@@ -4,9 +4,9 @@ const useAccountCategories = () => {
   const { t } = useTranslation()
 
   const accountCategories = [
-    { value: "Bank", label: t("accountCategories.bank") },
-    { value: "Bitcoin", label: t("accountCategories.bitcoin") },
-    { value: "Cash", label: t("accountCategories.cash") },
+    { value: "Bank", label: t("account_categories.bank") },
+    { value: "Bitcoin", label: t("account_categories.bitcoin") },
+    { value: "Cash", label: t("account_categories.cash") },
   ]
 
   return accountCategories

@@ -10,5 +10,10 @@
   "user_form": {
     "button_label": "Go to app",
     "username_label": "Username"
+  },
+  "account_categories": {
+    "bank": "Bank",
+    "bitcoin": "Bitcoin",
+    "cash": "Cash"
   }
 }
