@@ -8,6 +8,9 @@ const accountSlice = createSlice({
   name: "account",
   initialState,
   reducers: {
+    setAccounts(state, action) {
+      state.accounts = action.payload
+    },
     addAccount(state, action) {
       state.accounts.push(action.payload)
     },
@@ -21,5 +24,5 @@ const accountSlice = createSlice({
   },
 })
 
-export const { addAccount, addTransaction } = accountSlice.actions
+export const { addAccount, addTransaction, setAccounts } = accountSlice.actions
 export default accountSlice.reducer
