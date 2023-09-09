@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import { useTranslation } from "react-i18next"
 
 import Form from "../../ui/Form"
 import FormRow from "../../ui/FormRow"
@@ -23,6 +24,7 @@ export default function AddTransaction() {
   const accounts = useSelector((state) => state.account.accounts)
   const categories = useCategories()
   const dispatch = useDispatch()
+  const { t } = useTranslation()
 
   const [accountType, setAccountType] = useState("Bank")
   const [category, setCategory] = useState("home")
@@ -50,14 +52,14 @@ export default function AddTransaction() {
   return (
     <StyledAddTransaction>
       <Form onSubmit={handleSubmit}>
-        <FormRow label="Account">
+        <FormRow label={t("add_transaction.account_label")}>
           <SelectAlternative
             accounts={accounts}
             value={accountType}
             onChange={(e) => setAccountType(e.target.value)}
           />
         </FormRow>
-        <FormRow label="Category">
+        <FormRow label={t("add_transaction.category_label")}>
           <Select
             options={categories}
             id="category"
@@ -65,7 +67,7 @@ export default function AddTransaction() {
             onChange={(e) => setCategory(e.target.value)}
           />
         </FormRow>
-        <FormRow label="Amount">
+        <FormRow label={t("add_transaction.amount_label")}>
           <Input
             type="number"
             id="amount"
@@ -92,7 +94,7 @@ export default function AddTransaction() {
           />
           +
         </FormRow>
-        <FormRow label="Description">
+        <FormRow label={t("add_transaction.description_label")}>
           <Input
             type="text"
             id="description"
@@ -101,7 +103,7 @@ export default function AddTransaction() {
             onChange={(e) => setDescription(e.target.value)}
           />
         </FormRow>
-        <FormRow label="To">
+        <FormRow label={t("add_transaction.to_label")}>
           <Input
             type="text"
             id="to"
@@ -110,7 +112,7 @@ export default function AddTransaction() {
             onChange={(e) => setTo(e.target.value)}
           />
         </FormRow>
-        <Button size="small">Add</Button>
+        <Button size="small">{t("add_transaction.add_button")}</Button>
       </Form>
     </StyledAddTransaction>
   )
