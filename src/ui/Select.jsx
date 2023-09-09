@@ -13,9 +13,9 @@ const StyledSelect = styled.select`
   }
 `
 
-export const Select = React.forwardRef(
-  ({ options, onChange, onBlur, name }, ref) => (
-    <StyledSelect name={name} ref={ref} onChange={onChange} onBlur={onBlur}>
+export default function Select({ options, value, onChange, ...props }) {
+  return (
+    <StyledSelect value={value} onChange={onChange} {...props}>
       {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}
@@ -23,4 +23,4 @@ export const Select = React.forwardRef(
       ))}
     </StyledSelect>
   )
-)
+}
