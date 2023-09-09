@@ -6,5 +6,9 @@
   "main_nav": {
     "welcome": "Vítej",
     "dashboard": "Domů"
+  },
+  "user_form": {
+    "button_label": "Přejdi do aplikace",
+    "username_label": "Přezdívka"
   }
 }

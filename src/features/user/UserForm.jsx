@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
+import { useTranslation } from "react-i18next"
 
 import Form from "../../ui/Form"
 import Input from "../../ui/Input"
@@ -13,9 +14,11 @@ export default function UserForm() {
   const [name, setName] = useState("")
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const { t } = useTranslation()
 
   function handleSubmit(e) {
     e.preventDefault()
+    if (!name) return
     dispatch(setUsername(name))
     setName("")
     navigate("/dashboard")
@@ -23,7 +26,7 @@ export default function UserForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <FormRow label="Username">
+      <FormRow label={t("user_form.username_label")}>
         <Input
           id="initialBalance"
           type="text"
@@ -31,7 +34,7 @@ export default function UserForm() {
           onChange={(e) => setName(e.target.value)}
         />
       </FormRow>
-      <Button size="small">Go to app</Button>
+      <Button size="small">{t("user_form.button_label")}</Button>
     </Form>
   )
 }

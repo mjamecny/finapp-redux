@@ -6,5 +6,9 @@
   "main_nav": {
     "welcome": "Welcome",
     "dashboard": "Dashboard"
+  },
+  "user_form": {
+    "button_label": "Go to app",
+    "username_label": "Username"
   }
 }
