@@ -6,6 +6,7 @@ import GlobalStyles from "./styles/GlobalStyles"
 import Dashboard from "./pages/Dashboard"
 import AppLayout from "./ui/AppLayout"
 import AddAccount from "./features/account/AddAccount"
+import AddTransaction from "./features/account/AddTransaction"
 
 import { DarkModeProvider } from "./context/DarkModeContext"
 
@@ -19,6 +20,7 @@ export default function App() {
             <Route element={<AppLayout />}>
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="account/add" element={<AddAccount />} />
+              <Route path="transaction/add" element={<AddTransaction />} />
             </Route>
             <Route index element={<Welcome />} />
           </Routes>
