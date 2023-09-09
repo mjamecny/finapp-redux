@@ -52,6 +52,8 @@
   },
   "empty": {
     "accounts": "No accounts could be found.",
-    "add_account": "Add account"
+    "add_account": "Add account",
+    "transactions": "No transactions could be found.",
+    "add_transaction": "Add transaction"
   }
 }

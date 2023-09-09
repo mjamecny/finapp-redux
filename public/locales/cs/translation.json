@@ -52,6 +52,8 @@
   },
   "empty": {
     "accounts": "Žádné účty nenalezeny",
-    "add_account": "Přidat účet"
+    "add_account": "Přidat účet",
+    "transactions": "Žádné transakce nenalezeny",
+    "add_transaction": "Přidat transakci"
   }
 }
