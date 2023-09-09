@@ -11,6 +11,12 @@
     "button_label": "Go to app",
     "username_label": "Username"
   },
+  "transaction_list": {
+    "header_transactions": "Last transactions"
+  },
+  "account_list": {
+    "header": "Accounts"
+  },
   "account_categories": {
     "bank": "Bank",
     "bitcoin": "Bitcoin",

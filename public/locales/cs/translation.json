@@ -11,6 +11,12 @@
     "button_label": "Přejdi do aplikace",
     "username_label": "Přezdívka"
   },
+  "transaction_list": {
+    "header_transactions": "Poslední transakce"
+  },
+  "account_list": {
+    "header": "Účty"
+  },
   "account_categories": {
     "bank": "Banka",
     "bitcoin": "Bitcoin",
