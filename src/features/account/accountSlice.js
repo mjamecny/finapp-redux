@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-  accounts: [],
+  accounts: JSON.parse(localStorage.getItem("accounts")) || [],
 }
 
 const accountSlice = createSlice({
@@ -52,6 +52,15 @@ const accountSlice = createSlice({
     },
   },
 })
+
+export const saveAccountsToLocalStorage = (state) => (next) => (action) => {
+  const result = next(action)
+
+  const accounts = state.getState().account.accounts
+  localStorage.setItem("accounts", JSON.stringify(accounts))
+
+  return result
+}
 
 export const getTransactions = (state) =>
   state.account.accounts.reduce((allTransactions, account) => {
