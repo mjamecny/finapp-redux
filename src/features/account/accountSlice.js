@@ -33,6 +33,23 @@ const accountSlice = createSlice({
         )
       })
     },
+    updateTransaction(state, action) {
+      const { accountType, transactionId, updatedData } = action.payload
+
+      const account = state.accounts.find(
+        (account) => account.type === accountType
+      )
+
+      if (account) {
+        const transaction = account.transactions.find(
+          (transaction) => transaction.id === transactionId
+        )
+
+        if (transaction) {
+          Object.assign(transaction, updatedData)
+        }
+      }
+    },
   },
 })
 
@@ -61,5 +78,6 @@ export const {
   setAccounts,
   removeAccount,
   removeTransaction,
+  updateTransaction,
 } = accountSlice.actions
 export default accountSlice.reducer
