@@ -1,11 +1,13 @@
 import styled, { css } from "styled-components"
 import { Link, useNavigate } from "react-router-dom"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import toast from "react-hot-toast"
 
 import { convertToDDMMYYYY, getCurrency } from "../../utils/helpers"
+import ActionButton from "../../ui/ActionButton"
 
 import AccountIcon from "../../ui/AccountIcon"
-import ActionButton from "../../ui/ActionButton"
+import { removeTransaction } from "./accountSlice"
 
 const StyledTransaction = styled.div`
   color: var(--color-grey-font-900);
@@ -65,6 +67,12 @@ export default function Transaction({ transaction }) {
   const currencyLabel = getCurrency(currency)
   const { accountType, description, amount, id, created_at } = transaction
   const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+  function handleRemove() {
+    dispatch(removeTransaction(id))
+    toast.success("Transaction removed")
+  }
 
   return (
     <StyledTransaction>
@@ -106,7 +114,7 @@ export default function Transaction({ transaction }) {
           <ActionButtonContainer>
             <>
               <ActionButton type="edit" size="small" />
-              <ActionButton type="delete" size="small" />
+              <ActionButton type="delete" size="small" onClick={handleRemove} />
             </>
           </ActionButtonContainer>
         </div>
