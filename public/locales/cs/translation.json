@@ -23,6 +23,21 @@
   "account_list": {
     "header": "Účty"
   },
+  "filter": {
+    "search_placeholder": "Hledat podle popisu",
+    "all_label": "Všechny",
+    "withdrawals_label": "Výběry",
+    "deposits_label": "Vklady",
+    "last_7_days_label": "Posledních 7 dní",
+    "last_30_days_label": "Posledních 30 dní",
+    "last_90_days_label": "Posledních 90 dní"
+  },
+  "sort": {
+    "sort_option_description_asc": "Seřadit podle popisu (A-Z)",
+    "sort_option_description_dsc": "Seřadit podle popisu (Z-A)",
+    "sort_option_date_asc": "Seřadit podle data (nejstarší první)",
+    "sort_option_date_dsc": "Seřadit podle data (nejnovější první)"
+  },
   "account_categories": {
     "bank": "Banka",
     "bitcoin": "Bitcoin",
