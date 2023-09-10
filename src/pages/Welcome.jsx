@@ -1,12 +1,12 @@
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+import { useSelector } from "react-redux"
 
 import Logo from "../ui/Logo"
 import Heading from "../ui/Heading"
 import Locale from "../ui/Locale"
 import UserForm from "../features/user/userForm"
-import { useSelector } from "react-redux"
-import { useNavigate } from "react-router-dom"
+import Button from "../ui/Button"
 
 const StyledWelcome = styled.div`
   display: flex;
@@ -45,11 +45,6 @@ const LocaleContainer = styled.div`
 export default function Welcome() {
   const { username, currency } = useSelector((state) => state.user)
   const { t } = useTranslation()
-  const navigate = useNavigate()
-
-  if (username && currency) {
-    navigate("/dashboard")
-  }
 
   return (
     <StyledWelcome>
@@ -61,7 +56,13 @@ export default function Welcome() {
         <Heading as="h1">{t("welcome.heading")}</Heading>
         <Info>{t("welcome.info")}</Info>
       </TextBox>
-      <UserForm />
+      {!username || !currency ? (
+        <UserForm />
+      ) : (
+        <Button size="small" to="/dashboard">
+          {t("welcome.button_label")}
+        </Button>
+      )}
       <LocaleContainer>
         <Locale type="welcome" />
       </LocaleContainer>

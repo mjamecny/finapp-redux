@@ -1,7 +1,8 @@
 {
   "welcome": {
     "heading": "Easy way to manage your transactions",
-    "info": "Track your financial transactions for three different accounts."
+    "info": "Track your financial transactions for three different accounts.",
+    "button_label": "Go to app"
   },
   "main_nav": {
     "welcome": "Welcome",

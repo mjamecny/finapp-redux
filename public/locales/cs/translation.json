@@ -1,7 +1,8 @@
 {
   "welcome": {
     "heading": "Jednoduchý způsob správy vašich transakcí",
-    "info": "Sledujte své finanční transakce pro tři různé účty."
+    "info": "Sledujte své finanční transakce pro tři různé účty.",
+    "button_label": "Přejdi do aplikace"
   },
   "main_nav": {
     "welcome": "Vítej",
