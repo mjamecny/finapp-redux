@@ -52,7 +52,7 @@ export default function AccountList({ accounts }) {
   return (
     <StyledAccounts>
       <Header>
-        <Heading as="h2">Accounts</Heading>
+        <Heading as="h2">{t("account_list.header")}</Heading>
         <ActionButtonsContainer>
           {accounts.length < 3 && (
             <ActionButton to="/account/add">
