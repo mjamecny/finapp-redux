@@ -63,6 +63,11 @@ export default function MainNav({ setShowMenu }) {
             {t("main_nav.transactions")}
           </StyledNavLink>
         </NavItem>
+        <NavItem>
+          <StyledNavLink to="/stats" onClick={closeMenu}>
+            {t("main_nav.stats")}
+          </StyledNavLink>
+        </NavItem>
       </NavMenu>
       <HeaderMenu closeMenu={closeMenu} />
     </StyledNav>

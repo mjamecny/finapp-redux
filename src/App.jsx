@@ -10,6 +10,7 @@ import AddTransaction from "./features/account/AddTransaction"
 import TransactionDetail from "./pages/TransactionDetail"
 import Transactions from "./pages/Transactions"
 import PageNotFound from "./pages/PageNotFound"
+import Stats from "./pages/Stats"
 
 import { DarkModeProvider } from "./context/DarkModeContext"
 import UpdateTransaction from "./features/account/UpdateTransaction"
@@ -34,6 +35,7 @@ export default function App() {
                 path="transaction/:transactionId/edit"
                 element={<UpdateTransaction />}
               />
+              <Route path="stats" element={<Stats />} />
             </Route>
             <Route path="*" element={<PageNotFound />} />
             <Route index element={<Welcome />} />

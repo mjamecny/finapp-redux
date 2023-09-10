@@ -6,7 +6,8 @@
   "main_nav": {
     "welcome": "Vítej",
     "dashboard": "Domů",
-    "transactions": "Transakce"
+    "transactions": "Transakce",
+    "stats": "Statistiky"
   },
   "user_form": {
     "button_label": "Přejdi do aplikace",
