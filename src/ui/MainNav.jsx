@@ -58,6 +58,11 @@ export default function MainNav({ setShowMenu }) {
             {t("main_nav.dashboard")}
           </StyledNavLink>
         </NavItem>
+        <NavItem>
+          <StyledNavLink to="/transactions" onClick={closeMenu}>
+            {t("main_nav.transactions")}
+          </StyledNavLink>
+        </NavItem>
       </NavMenu>
       <HeaderMenu closeMenu={closeMenu} />
     </StyledNav>

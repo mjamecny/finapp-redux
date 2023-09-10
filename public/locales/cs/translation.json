@@ -5,7 +5,8 @@
   },
   "main_nav": {
     "welcome": "Vítej",
-    "dashboard": "Domů"
+    "dashboard": "Domů",
+    "transactions": "Transakce"
   },
   "user_form": {
     "button_label": "Přejdi do aplikace",

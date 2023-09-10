@@ -5,7 +5,8 @@
   },
   "main_nav": {
     "welcome": "Welcome",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "transactions": "Transactions"
   },
   "user_form": {
     "button_label": "Go to app",
