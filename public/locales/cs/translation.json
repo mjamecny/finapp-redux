@@ -41,11 +41,6 @@
     "sort_option_date_asc": "Seřadit podle data (nejstarší první)",
     "sort_option_date_dsc": "Seřadit podle data (nejnovější první)"
   },
-  "account_categories": {
-    "bank": "Banka",
-    "bitcoin": "Bitcoin",
-    "cash": "Hotovost"
-  },
   "add_account": {
     "account_label": "Účet",
     "initial_label": "Počáteční stav účtu",

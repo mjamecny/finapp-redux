@@ -5,7 +5,7 @@ import { useSelector } from "react-redux"
 import Logo from "../ui/Logo"
 import Heading from "../ui/Heading"
 import Locale from "../ui/Locale"
-import UserForm from "../features/user/userForm"
+import UserForm from "../features/user/UserForm"
 import Button from "../ui/Button"
 
 const StyledWelcome = styled.div`
