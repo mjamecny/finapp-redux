@@ -102,5 +102,11 @@
   "recent_spending": {
     "heading": "Spending per categories",
     "empty": "No withdrawals in this period"
+  },
+  "monthly_spending": {
+    "heading": "Withdrawals and Deposits",
+    "w_label": "Withdrawals",
+    "d_label": "Deposits",
+    "notfound": "No withdrawals or deposits found"
   }
 }

@@ -102,5 +102,11 @@
   "recent_spending": {
     "heading": "Výdaje napříč kategoriemi",
     "empty": "Nebyly nenalezeny žádné výdaje"
+  },
+  "monthly_spending": {
+    "heading": "Příjmy a výdaje",
+    "w_label": "Výdaje",
+    "d_label": "Příjmy",
+    "notfound": "Nebyly nalezeny žádné výdaje ani příjmy"
   }
 }
