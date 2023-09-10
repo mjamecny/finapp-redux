@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useTranslation } from "react-i18next"
 import toast from "react-hot-toast"
@@ -29,12 +29,18 @@ export default function AddTransaction() {
   const { t } = useTranslation()
   const navigate = useNavigate()
 
-  const [accountType, setAccountType] = useState("Bank")
+  const [accountType, setAccountType] = useState("")
   const [category, setCategory] = useState("home")
   const [amount, setAmount] = useState("")
   const [transactionType, setTransactionType] = useState("withdraw")
   const [description, setDescription] = useState("")
   const [to, setTo] = useState("")
+
+  useEffect(() => {
+    if (accounts.length) {
+      setAccountType(accounts[0].type)
+    }
+  }, [accounts])
 
   function handleSubmit(e) {
     e.preventDefault()

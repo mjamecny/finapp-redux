@@ -65,4 +65,6 @@ export default function Button({ children, size, onClick, to }) {
       </StyledLink>
     )
   }
+
+  return <StyledButton size={size}>{children}</StyledButton>
 }
