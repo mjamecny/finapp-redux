@@ -94,5 +94,8 @@
     "add_account": "Přidat účet",
     "transactions": "Žádné transakce nenalezeny",
     "add_transaction": "Přidat transakci"
+  },
+  "notfound": {
+    "message": "Stránka nenalezena"
   }
 }

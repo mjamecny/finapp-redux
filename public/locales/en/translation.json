@@ -94,5 +94,8 @@
     "add_account": "Add account",
     "transactions": "No transactions could be found.",
     "add_transaction": "Add transaction"
+  },
+  "notfound": {
+    "message": "Page not found"
   }
 }
