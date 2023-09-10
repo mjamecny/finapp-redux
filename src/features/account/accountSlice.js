@@ -59,6 +59,22 @@ export const getTransactions = (state) =>
     return allTransactions
   }, [])
 
+export const getRecentTransactions = (state, numDays) => {
+  const currentDate = new Date()
+  const daysAgo = new Date(
+    currentDate.getTime() - numDays * 24 * 60 * 60 * 1000
+  )
+
+  const transactions = getTransactions(state)
+
+  return transactions
+    .filter((transaction) => {
+      const transactionDate = new Date(transaction.created_at)
+      return transactionDate >= daysAgo && transactionDate <= currentDate
+    })
+    .filter((transaction) => transaction.amount < 0)
+}
+
 export const getTransaction = (state, id) => {
   let foundTransaction = null
   state.account.accounts.forEach((account) => {
