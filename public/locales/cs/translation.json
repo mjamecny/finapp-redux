@@ -14,6 +14,12 @@
   "transaction_list": {
     "header_transactions": "Poslední transakce"
   },
+  "transaction_details": {
+    "header": "Detaily transakce",
+    "created_label": "Datum transakce",
+    "category_label": "Kategorie",
+    "to_label": "Příjemce"
+  },
   "account_list": {
     "header": "Účty"
   },
@@ -40,6 +46,9 @@
     "to_label": "Příjemce",
     "add_button": "Přidat transakci",
     "add_toast": "Transakce byla přidána"
+  },
+  "delete_transaction": {
+    "delete_toast": "Transakce byla smazána"
   },
   "category": {
     "home": "Domov",

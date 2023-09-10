@@ -14,6 +14,12 @@
   "transaction_list": {
     "header_transactions": "Last transactions"
   },
+  "transaction_details": {
+    "header": "Transaction details",
+    "created_label": "Created",
+    "category_label": "Category",
+    "to_label": "To"
+  },
   "account_list": {
     "header": "Accounts"
   },
@@ -40,6 +46,9 @@
     "to_label": "To",
     "add_button": "Add transaction",
     "add_toast": "New transaction successfully created"
+  },
+  "delete_transaction": {
+    "delete_toast": "Transaction successfully deleted"
   },
   "category": {
     "home": "Home",
