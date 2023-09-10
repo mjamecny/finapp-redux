@@ -5,6 +5,7 @@ import Empty from "../ui/Empty"
 import Row from "../ui/Row"
 import AccountList from "../features/account/AccountList"
 import TransactionList from "../features/account/TransactionsList"
+import TotalAmount from "../features/account/TotalAmount"
 
 import { getTransactions } from "../features/account/accountSlice"
 
@@ -23,6 +24,7 @@ export default function Dashboard() {
         />
       ) : (
         <Row type="vertical">
+          <TotalAmount />
           <AccountList accounts={accounts} />
           <TransactionList transactions={transactions} />
         </Row>
