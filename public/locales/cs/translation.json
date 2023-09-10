@@ -97,5 +97,9 @@
   },
   "notfound": {
     "message": "Stránka nenalezena"
+  },
+  "recent_spending": {
+    "heading": "Výdaje napříč kategoriemi",
+    "empty": "Nebyly nenalezeny žádné výdaje"
   }
 }

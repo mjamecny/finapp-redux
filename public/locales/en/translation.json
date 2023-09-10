@@ -97,5 +97,9 @@
   },
   "notfound": {
     "message": "Page not found"
+  },
+  "recent_spending": {
+    "heading": "Spending per categories",
+    "empty": "No withdrawals in this period"
   }
 }
