@@ -57,7 +57,7 @@ export default function TransactionList({ transactions, type }) {
     <StyledTransactions type={type}>
       {type !== "page" && (
         <Header>
-          <Heading as="h2">Transactions</Heading>
+          <Heading as="h2">{t("transaction_list.header_transactions")}</Heading>
           <ActionButtonsContainer>
             <ActionButton to="/transaction/add">
               <FaPlus />
