@@ -42,6 +42,24 @@ export const getTransactions = (state) =>
     return allTransactions
   }, [])
 
-export const { addAccount, addTransaction, setAccounts, removeAccount } =
-  accountSlice.actions
+export const getTransaction = (state, id) => {
+  let foundTransaction = null
+  state.account.accounts.forEach((account) => {
+    const transaction = account.transactions.find(
+      (transaction) => transaction.id === id
+    )
+    if (transaction) {
+      foundTransaction = transaction
+    }
+  })
+  return foundTransaction
+}
+
+export const {
+  addAccount,
+  addTransaction,
+  setAccounts,
+  removeAccount,
+  removeTransaction,
+} = accountSlice.actions
 export default accountSlice.reducer
