@@ -13,6 +13,7 @@ import Input from "../../ui/Input"
 import Button from "../../ui/Button"
 import ButtonBack from "../../ui/ButtonBack"
 import Select from "../../ui/Select"
+import toast from "react-hot-toast"
 
 const StyledAddTransaction = styled.div`
   display: flex;
@@ -65,6 +66,7 @@ export default function UpdateTransaction() {
       })
     )
 
+    toast.success(t("update_transaction.update_toast"))
     navigate("/dashboard")
   }
 
