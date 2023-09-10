@@ -108,5 +108,10 @@
     "w_label": "Výdaje",
     "d_label": "Příjmy",
     "notfound": "Nebyly nalezeny žádné výdaje ani příjmy"
+  },
+  "account_categories": {
+    "bank": "Banka",
+    "bitcoin": "Bitcoin",
+    "cash": "Hotovost"
   }
 }

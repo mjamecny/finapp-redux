@@ -108,5 +108,10 @@
     "w_label": "Withdrawals",
     "d_label": "Deposits",
     "notfound": "No withdrawals or deposits found"
+  },
+  "accoun_categories": {
+    "bank": "Bank",
+    "bitcoin": "Bitcoin",
+    "cash": "Cash"
   }
 }
