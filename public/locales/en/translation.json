@@ -63,6 +63,14 @@
     "add_button": "Add transaction",
     "add_toast": "New transaction successfully created"
   },
+  "update_transaction": {
+    "category_label": "Category",
+    "amount_label": "Amount",
+    "description_label": "Description",
+    "to_label": "To",
+    "update_button": "Update",
+    "update_toast": "Transaction successfully updated"
+  },
   "delete_transaction": {
     "delete_toast": "Transaction successfully deleted"
   },

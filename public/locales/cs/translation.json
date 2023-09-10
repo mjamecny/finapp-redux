@@ -63,6 +63,14 @@
     "add_button": "Přidat transakci",
     "add_toast": "Transakce byla přidána"
   },
+  "update_transaction": {
+    "category_label": "Kategorie",
+    "amount_label": "Částka",
+    "description_label": "Popis transakce",
+    "to_label": "Příjemce",
+    "update_button": "Uložit",
+    "update_toast": "Transakce uložena"
+  },
   "delete_transaction": {
     "delete_toast": "Transakce byla smazána"
   },
