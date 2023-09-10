@@ -113,7 +113,11 @@ export default function Transaction({ transaction }) {
 
           <ActionButtonContainer>
             <>
-              <ActionButton type="edit" size="small" />
+              <ActionButton
+                type="edit"
+                size="small"
+                onClick={() => navigate(`/transaction/${id}/edit`)}
+              />
               <ActionButton type="delete" size="small" onClick={handleRemove} />
             </>
           </ActionButtonContainer>
