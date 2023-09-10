@@ -5,6 +5,8 @@ import Logo from "../ui/Logo"
 import Heading from "../ui/Heading"
 import Locale from "../ui/Locale"
 import UserForm from "../features/user/userForm"
+import { useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
 const StyledWelcome = styled.div`
   display: flex;
@@ -41,7 +43,13 @@ const LocaleContainer = styled.div`
 `
 
 export default function Welcome() {
+  const { username, currency } = useSelector((state) => state.user)
   const { t } = useTranslation()
+  const navigate = useNavigate()
+
+  if (username && currency) {
+    navigate("/dashboard")
+  }
 
   return (
     <StyledWelcome>
