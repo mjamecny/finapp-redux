@@ -11,9 +11,11 @@ import TransactionDetail from "./pages/TransactionDetail"
 import Transactions from "./pages/Transactions"
 import PageNotFound from "./pages/PageNotFound"
 import Stats from "./pages/Stats"
+import UserAccount from "./pages/UserAccount"
+import UpdateTransaction from "./features/account/UpdateTransaction"
+import Import from "./pages/Import"
 
 import { DarkModeProvider } from "./context/DarkModeContext"
-import UpdateTransaction from "./features/account/UpdateTransaction"
 
 export default function App() {
   return (
@@ -36,8 +38,10 @@ export default function App() {
                 element={<UpdateTransaction />}
               />
               <Route path="stats" element={<Stats />} />
+              <Route path="user" element={<UserAccount />} />
             </Route>
             <Route path="*" element={<PageNotFound />} />
+            <Route path="import" element={<Import />} />
             <Route index element={<Welcome />} />
           </Routes>
         </BrowserRouter>
