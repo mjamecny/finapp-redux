@@ -2,7 +2,8 @@
   "welcome": {
     "heading": "Easy way to manage your transactions",
     "info": "Track your financial transactions for three different accounts.",
-    "button_label": "Go to app"
+    "button_label": "Go to app",
+    "button_import_label": "Import data"
   },
   "main_nav": {
     "welcome": "Welcome",
@@ -12,7 +13,8 @@
   },
   "user_form": {
     "button_label": "Go to app",
-    "username_label": "Username"
+    "username_label": "Username",
+    "currency_label": "Currency"
   },
   "transaction_list": {
     "header_transactions": "Last transactions"

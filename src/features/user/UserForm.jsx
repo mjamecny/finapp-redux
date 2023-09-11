@@ -45,7 +45,7 @@ export default function UserForm() {
           onChange={(e) => setName(e.target.value)}
         />
       </FormRow>
-      <FormRow label="Currency">
+      <FormRow label={t("user_form.currency_label")}>
         <Select
           options={currencyOptions}
           id="currency"

@@ -61,7 +61,7 @@ export default function Welcome() {
       {!username || !currency || accounts.length === 0 ? (
         <>
           <Button size="small" to="/import">
-            Import data
+            {t("welcome.button_import_label")}
           </Button>
           <UserForm />
         </>
