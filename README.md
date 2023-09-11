@@ -5,6 +5,7 @@ App for tracking financial transactions of three different accounts.
 ## Features
 
 - all data stored in browser (local storage)
+- import/export user and accounts data in JSON file
 - add three different accounts (cash,bank,bitcoin)
 - remove account
 - incomes and outcomes bar for each account
