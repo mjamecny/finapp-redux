@@ -41,6 +41,7 @@ export default function UserForm() {
           id="initialBalance"
           type="text"
           value={name}
+          required
           onChange={(e) => setName(e.target.value)}
         />
       </FormRow>
@@ -52,7 +53,9 @@ export default function UserForm() {
           onChange={(e) => setCurrency(e.target.value)}
         />
       </FormRow>
-      <Button size="small">{t("user_form.button_label")}</Button>
+      {name !== "" && (
+        <Button size="small">{t("user_form.button_label")}</Button>
+      )}
     </Form>
   )
 }
