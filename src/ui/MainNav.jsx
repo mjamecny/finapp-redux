@@ -3,6 +3,8 @@ import { styled } from "styled-components"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 
+import { FaUserAlt } from "react-icons/fa"
+
 import HeaderMenu from "./HeaderMenu"
 
 const StyledNav = styled.div`
@@ -18,6 +20,17 @@ const StyledNav = styled.div`
   border: 1px solid var(--color-grey-font-900);
   width: 250px;
   right: 0;
+`
+
+const UserContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  & svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
 `
 
 const NavMenu = styled.ul`
@@ -52,7 +65,9 @@ export default function MainNav({ setShowMenu }) {
   return (
     <StyledNav>
       <StyledNavLink to="/user" onClick={closeMenu}>
-        <span>{`${t("main_nav.welcome")}, ${username}`}</span>
+        <UserContainer>
+          <FaUserAlt /> <span>{username}</span>
+        </UserContainer>
       </StyledNavLink>
 
       <NavMenu>
