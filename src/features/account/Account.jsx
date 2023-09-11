@@ -11,6 +11,7 @@ import { removeAccount } from "./accountSlice"
 
 import AccountIcon from "../../ui/AccountIcon"
 import SpinnerMini from "../../ui/SpinnerMini"
+import AccountStatsBar from "./AccountStatsBar"
 
 const StyledAccount = styled.div`
   display: flex;
@@ -72,7 +73,7 @@ const StyledAmount = styled.p`
 export default function Account({ account }) {
   const currency = useSelector((state) => state.user.currency)
   const dispatch = useDispatch()
-  const { type, balance, id } = account
+  const { type, balance, id, transactions } = account
   const { btcPrice, isLoading: isLoadingPrice } = useFetchBtcPrice()
   const { rate, isLoading: isLoadingRate } = useFetchRate()
   const { t } = useTranslation()
@@ -103,6 +104,12 @@ export default function Account({ account }) {
       )}
 
       {type === "Bitcoin" && <p>{balance.toFixed(5)}</p>}
+
+      <AccountStatsBar
+        account={account}
+        transactions={transactions}
+        userCurrency={currency}
+      />
     </StyledAccount>
   )
 }
