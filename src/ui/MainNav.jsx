@@ -51,7 +51,10 @@ export default function MainNav({ setShowMenu }) {
 
   return (
     <StyledNav>
-      <span>{`${t("main_nav.welcome")}, ${username}`}</span>
+      <StyledNavLink to="/user" onClick={closeMenu}>
+        <span>{`${t("main_nav.welcome")}, ${username}`}</span>
+      </StyledNavLink>
+
       <NavMenu>
         <NavItem>
           <StyledNavLink to="/dashboard" onClick={closeMenu}>
