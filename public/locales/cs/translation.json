@@ -109,5 +109,12 @@
     "bank": "Banka",
     "bitcoin": "Bitcoin",
     "cash": "Hotovost"
+  },
+  "import": {
+    "heading": "Nahrát uživatelská data",
+    "user_data_label": "Soubor s daty (.json)",
+    "button_label": "Nahrát",
+    "toast": "Data úspěšně nahrána",
+    "toast_error": "Špatný formát souboru"
   }
 }

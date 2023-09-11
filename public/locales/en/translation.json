@@ -110,9 +110,11 @@
     "d_label": "Deposits",
     "notfound": "No withdrawals or deposits found"
   },
-  "accoun_categories": {
-    "bank": "Bank",
-    "bitcoin": "Bitcoin",
-    "cash": "Cash"
+  "import": {
+    "heading": "Import user data",
+    "user_data_label": "User data file (.json)",
+    "button_label": "Import",
+    "toast": "Data successfully imported",
+    "toast_error": "Invalid file format"
   }
 }
