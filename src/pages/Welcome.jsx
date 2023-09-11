@@ -44,6 +44,7 @@ const LocaleContainer = styled.div`
 
 export default function Welcome() {
   const { username, currency } = useSelector((state) => state.user)
+  const accounts = useSelector((state) => state.account.accounts)
   const { t } = useTranslation()
 
   return (
@@ -56,8 +57,14 @@ export default function Welcome() {
         <Heading as="h1">{t("welcome.heading")}</Heading>
         <Info>{t("welcome.info")}</Info>
       </TextBox>
-      {!username || !currency ? (
-        <UserForm />
+
+      {!username || !currency || accounts.length === 0 ? (
+        <>
+          <Button size="small" to="/import">
+            Import data
+          </Button>
+          <UserForm />
+        </>
       ) : (
         <Button size="small" to="/dashboard">
           {t("welcome.button_label")}
